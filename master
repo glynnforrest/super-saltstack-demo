@@ -1,6 +1,8 @@
 reactor:
   - 'salt/beacon/super-saltstack-master/inotify//home/vagrant/motd.txt':
     - /srv/reactor/motd_change.sls
+  - 'super-saltstack/webserver/up':
+    - /srv/reactor/webserver_up.sls
 
 # allow minions to push files up to the master
 # this is disabled by default, as it could pose a security risk
