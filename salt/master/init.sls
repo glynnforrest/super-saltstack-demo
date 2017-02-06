@@ -12,3 +12,10 @@ vim:
 pyinotify:
     pkg.installed:
         - name: python-pyinotify
+
+reset_script:
+    file.managed:
+        - source: salt://master/reset.sh
+        - name: /home/vagrant/reset.sh
+        - user: vagrant
+        - mode: 0755
