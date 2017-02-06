@@ -19,3 +19,14 @@ reset_script:
         - name: /home/vagrant/reset.sh
         - user: vagrant
         - mode: 0755
+
+reset_all_script:
+    file.managed:
+        - source: salt://master/reset_all.sh
+        - name: /home/vagrant/reset_all.sh
+        - user: vagrant
+        - mode: 0755
+
+motd.txt:
+    file.touch:
+        - name: /home/vagrant/motd.txt
