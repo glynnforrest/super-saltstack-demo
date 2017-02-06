@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
     master.vm.hostname = 'super-saltstack-master'
 
     master.vm.synced_folder "salt", "/srv/salt", :nfs => true
-    master.vm.synced_folder "pillar", "/srv/pillar", :nfs => true
+    master.vm.synced_folder "reactor", "/srv/reactor", :nfs => true
 
     master.vm.provision :salt do |salt|
       salt.install_type = "stable"
@@ -21,6 +21,7 @@ Vagrant.configure(2) do |config|
       salt.bootstrap_options = '-c /tmp'
       salt.run_highstate = false
       salt.minion_config = 'minion/master'
+      salt.master_config = 'master'
     end
   end
 
