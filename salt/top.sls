@@ -1,6 +1,7 @@
 base:
     super-saltstack-master:
-        - tmux
+        - master
+        - beacon.motd
     super-saltstack-web:
         - nginx
     super-saltstack-host:
