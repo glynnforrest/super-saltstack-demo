@@ -28,5 +28,7 @@ reset_all_script:
         - mode: 0755
 
 motd.txt:
-    file.touch:
+    file.managed:
         - name: /home/vagrant/motd.txt
+        - user: vagrant
+        - mode: 0644
