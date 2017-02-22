@@ -54,7 +54,7 @@ Edit `/home/vagrant/motd.txt` to set off the following sequence:
   file.
 * When the highstate on the web minion has completed, another reactor
   will trigger another orchestrate runner, which will take a picture
-  using `imagesnap` on the vagrant host minion.
+  using `imagesnap` on the host minion.
 * This picture will be grabbed by salt and placed in the nginx web
   root on the web minion.
 
